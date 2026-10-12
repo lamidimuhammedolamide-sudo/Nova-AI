@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#101218">
+    <title>Nova AI — Your AI Assistant</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/script.js" defer></script>
+</head>
+<body>
+    <div class="app">
+        <aside class="sidebar">
+            <a class="brand" href="/">
+                <span class="brand-icon">✳</span>
+                <span>Nova AI</span>
+            </a>
+
+            <button id="new-chat" class="new-chat">
+                <span>＋</span> New chat
+            </button>
+
+            <div class="sidebar-label">YOUR ASSISTANT</div>
+            <div class="side-note">
+                <span class="status-dot"></span>
+                Ready to help you
+            </div>
+
+            <div class="sidebar-bottom">
+                An AI assistant for learning, ideas and creativity.
+            </div>
+        </aside>
+
+        <main class="main">
+            <header class="topbar">
+                <button id="menu-toggle" class="icon-button"
+                    aria-label="Toggle sidebar">☰</button>
+                <div class="mobile-brand">✳ Nova AI</div>
+                <div class="model-label">
+                    <span class="status-dot"></span> AI Assistant
+                </div>
+            </header>
+
+            <section id="chat" class="chat" aria-live="polite">
+                <div id="welcome" class="welcome">
+                    <div class="welcome-icon">✳</div>
+                    <p class="eyebrow">YOUR AI ASSISTANT</p>
+                    <h1>What can I help you with?</h1>
+                    <p class="welcome-description">
+                        Ask a question, explore an idea, or learn something new.
+                    </p>
+
+                    <div class="suggestions">
+                        <button class="suggestion"
+                            data-prompt="Explain artificial intelligence in simple terms.">
+                            <span>✧</span>
+                            <span><strong>Learn something</strong>
+                            <small>Understand a difficult topic</small></span>
+                        </button>
+
+                        <button class="suggestion"
+                            data-prompt="Give me five creative Python project ideas.">
+                            <span>⌘</span>
+                            <span><strong>Build a project</strong>
+                            <small>Explore practical ideas</small></span>
+                        </button>
+
+                        <button class="suggestion"
+                            data-prompt="Help me create a study plan for this week.">
+                            <span>▤</span>
+                            <span><strong>Plan my work</strong>
+                            <small>Organize your goals</small></span>
+                        </button>
+
+                        <button class="suggestion"
+                            data-prompt="Teach me a surprising science fact and explain it.">
+                            <span>✳</span>
+                            <span><strong>Discover something</strong>
+                            <small>Explore a new idea</small></span>
+                        </button>
+                    </div>
+                </div>
+
+                <div id="messages" class="messages"></div>
+            </section>
+
+            <section class="composer-area">
+                <form id="chat-form" class="composer">
+                    <textarea id="message-input"
+                        placeholder="Message Nova AI..."
+                        rows="1" maxlength="6000"
+                        aria-label="Your message" required></textarea>
+                    <button id="send-button" class="send-button"
+                        type="submit" aria-label="Send message">↑</button>
+                </form>
+                <p class="disclaimer">
+                    AI can make mistakes. Verify important information.
+                </p>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
